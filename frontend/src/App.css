@@ -1,0 +1,830 @@
+/* Hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #1a237e;
+  color: white;
+}
+
+.app-header select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #263238;
+  color: #eceff1;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #37474f;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.sidebar-subtitle {
+  font-size: 0.8rem;
+  color: #90a4ae;
+}
+
+.sidebar-group {
+  border-bottom: 1px solid #37474f;
+}
+
+.sidebar-group-title {
+  padding: 0.6rem 1rem 0.3rem;
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #78909c;
+  letter-spacing: 0.5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 0.45rem 1rem 0.45rem 1.5rem;
+  color: #b0bec5;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.15s;
+}
+
+.sidebar li a:hover {
+  background: #37474f;
+  color: white;
+}
+
+.sidebar li a.active {
+  background: #1a237e;
+  color: white;
+}
+
+/* Page */
+.page {
+  max-width: 1000px;
+}
+
+.page h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #1a237e;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tabs button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tabs button.active {
+  color: #1a237e;
+  border-bottom-color: #1a237e;
+  font-weight: 600;
+}
+
+/* Forms */
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-section h3 {
+  font-size: 1rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.5rem;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.form-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-checks label {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.5rem 1.5rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.form-actions button:disabled {
+  opacity: 0.6;
+}
+
+.message {
+  font-size: 0.85rem;
+  color: #2e7d32;
+}
+
+/* Inline form */
+.form-inline {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.form-inline input,
+.form-inline select {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.form-inline button {
+  padding: 0.4rem 1rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Data table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.data-table th {
+  background: #f5f5f5;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #ddd;
+  color: #333;
+}
+
+.data-table td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table tr:hover {
+  background: #f9f9f9;
+}
+
+.btn-danger {
+  padding: 0.25rem 0.6rem;
+  background: #c62828;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.78rem;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 220px;
+}
+
+.toolbar select {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.inactive {
+  background: #fbe9e7;
+  color: #c62828;
+}
+
+/* Clickable rows */
+.clickable-row {
+  cursor: pointer;
+}
+
+.clickable-row:hover {
+  background: #e8eaf6 !important;
+}
+
+/* Page header with back button */
+.page-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-back {
+  padding: 0.3rem 0.7rem;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.btn-back:hover {
+  background: #f5f5f5;
+}
+
+/* Small button */
+.btn-small {
+  padding: 0.25rem 0.6rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.78rem;
+}
+
+/* Salary slip */
+.slip-header {
+  background: #f5f5f5;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.slip-summary {
+  margin-top: 1.5rem;
+  max-width: 500px;
+}
+
+.slip-summary .data-table td {
+  padding: 0.4rem 0.75rem;
+}
+
+/* Data table footer */
+.data-table tfoot td {
+  border-top: 2px solid #ddd;
+}
+
+/* Global button */
+button {
+  cursor: pointer;
+}
+
+.page > button {
+  padding: 0.4rem 1rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Admin sections */
+.admin-section {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.admin-section h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: #1a237e;
+}
+
+.admin-section button {
+  padding: 0.4rem 1rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.admin-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hint {
+  font-size: 0.78rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* Login page */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+}
+
+.login-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  width: 340px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-card h1 {
+  margin: 0 0 0.25rem;
+  color: #1a237e;
+  font-size: 1.6rem;
+}
+
+.login-subtitle {
+  color: #777;
+  font-size: 0.85rem;
+  margin: 0 0 1.5rem;
+}
+
+.login-field {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.login-field label {
+  display: block;
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.login-field input:focus {
+  border-color: #1a237e;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26,35,126,0.15);
+}
+
+.login-error {
+  color: #c62828;
+  font-size: 0.82rem;
+  margin: 0 0 0.75rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.6rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.login-btn:hover {
+  background: #283593;
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Dashboard Styles */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dashboard-card .card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.dashboard-card .card-label {
+  font-size: 0.82rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+/* ── Payroll Entry Modal ── */
+.payroll-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payroll-modal {
+  background: white;
+  width: 95vw;
+  max-width: 1400px;
+  height: 90vh;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.payroll-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: #1a237e;
+  color: white;
+  flex-shrink: 0;
+}
+
+.payroll-modal-header .nav-btn {
+  padding: 0.4rem 1rem;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.payroll-modal-header .nav-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.payroll-modal-header .nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.payroll-modal-header .emp-info {
+  text-align: center;
+  flex: 1;
+}
+
+.payroll-modal-header .emp-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.payroll-modal-header .emp-details {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.payroll-modal-header .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}
+
+.payroll-modal-header .close-btn:hover {
+  opacity: 1;
+}
+
+.payroll-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.payroll-col h3 {
+  font-size: 0.9rem;
+  color: #1a237e;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #e8eaf6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payroll-col .line-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.84rem;
+}
+
+.payroll-col .line-item:hover {
+  background: #f8f9ff;
+}
+
+.payroll-col .line-item .line-code {
+  color: #999;
+  font-size: 0.78rem;
+  width: 36px;
+  flex-shrink: 0;
+}
+
+.payroll-col .line-item .line-name {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+.payroll-col .line-item .line-amount {
+  font-weight: 600;
+  text-align: right;
+  min-width: 80px;
+}
+
+.payroll-col .line-item .line-detail {
+  font-size: 0.75rem;
+  color: #888;
+  margin-left: 0.3rem;
+}
+
+.payroll-col .line-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  background: #f5f5f5;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 4px;
+}
+
+.payroll-col .section-divider {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 0.5rem 0;
+}
+
+.payroll-col-sub h4 {
+  font-size: 0.82rem;
+  color: #666;
+  margin: 0.75rem 0 0.3rem;
+}
+
+.payroll-modal-footer {
+  flex-shrink: 0;
+  padding: 0.75rem 1.25rem;
+  background: #f5f5f5;
+  border-top: 2px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.payroll-modal-footer .summary-items {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.85rem;
+}
+
+.payroll-modal-footer .summary-item {
+  text-align: center;
+}
+
+.payroll-modal-footer .summary-item .label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.payroll-modal-footer .summary-item .value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.payroll-modal-footer .net-box {
+  background: #e8f5e9;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.payroll-modal-footer .net-box .label {
+  font-size: 0.75rem;
+  color: #2e7d32;
+  text-transform: uppercase;
+}
+
+.payroll-modal-footer .net-box .value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.payroll-modal-footer .net-box.warning {
+  background: #fbe9e7;
+}
+
+.payroll-modal-footer .net-box.warning .value {
+  color: #c62828;
+}
+
+.payroll-modal-footer .calc-btn {
+  padding: 0.5rem 1.5rem;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.payroll-modal-footer .calc-btn:hover {
+  background: #283593;
+}
+
+.payroll-modal-footer .calc-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Warning/info banners inside modal */
+.payroll-warning {
+  background: #fff3e0;
+  color: #e65100;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  margin-bottom: 0.5rem;
+}
+
+.payroll-info {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Print-only / no-print helpers */
+.print-only { display: none; }
+
+/* Print styles — salary slip */
+@media print {
+  .no-print, .app-sidebar, .app-header, .btn-back { display: none !important; }
+  .print-only { display: block !important; }
+  .app-layout { display: block; }
+  .app-main { display: block; }
+  .app-content { padding: 0; overflow: visible; }
+  .salary-slip { padding: 0; }
+  .salary-slip .data-table { font-size: 11px; }
+  .salary-slip .slip-header { margin-bottom: 12px; }
+  .salary-slip .slip-summary { margin-top: 12px; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
